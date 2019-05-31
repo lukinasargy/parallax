@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section parallax">
+            <h1>Heading</h1>
+        </div>
+        <div class="section text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur est nesciunt neque dignissimos voluptatibus quaerat incidunt sit esse optio, error.</p>
+        </div>
+        <div class="section content parallax">
+            <h1>Site Content</h1>
+        </div>
+    </div>
+    <style>
+        .wrapper {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 1px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            position: relative;
+        }
+        .text {
+            color: #666;
+            height: 300vh;
+        }
+        .parallax:after {
+            background-image: url('img/1.jpg');
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateZ(-0.3px) scale(1.3);
+            background-size: cover;
+            z-index: -1;
+        }
+        .content:after {
+            background-image: url('img/2.jpg');
+            top: 0;
+            right: 0;
+            bottom: -50vh;
+            left: 0;
+        }
+
+    </style>
+</body>
+
+</html>
